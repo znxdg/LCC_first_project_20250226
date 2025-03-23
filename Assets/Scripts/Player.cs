@@ -8,19 +8,31 @@ namespace YuCheng
         public override void Awake()
         {
             playerType = true;
-            //con = 70;
-            //pow = 60;
-            //base.Awake();
-            //hp = hpMax;
+            str = 55;                 
+            con = 50;                 
+            dex = 60;                 
+            pow = 60;                 
+            intelligence = 75;        
+            luck = 60;
         }
 
         private void Update()
         {
-            con = 70;
-            pow = 60;
             base.Awake();
             hp = hpMax;
-            Debug.Log(hp); 
+        }
+
+        public void Attack(Enemy target, int damage)
+        {
+            if (target != null)
+            {
+                target.Hurt(damage);
+                Debug.Log($"對 {target.gameObject.name} 造成 {damage} 點傷害");
+            }
+            else
+            {
+                Debug.Log("攻擊目標無效!");
+            }
         }
     }
 }
