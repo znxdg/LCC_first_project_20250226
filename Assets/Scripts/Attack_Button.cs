@@ -11,7 +11,7 @@ namespace YuCheng
             Enemy enemy = Object.FindFirstObjectByType<Enemy>();
             Debug.Log("click() 方法被呼叫！");
 
-            user.Attack(enemy, 5);
+            user.Attack(enemy, 5, Player.StatType.Intelligence);
         }
     }
 }
