@@ -36,7 +36,7 @@ namespace YuCheng
             if (!playerType) ani.SetTrigger("hurt");
         }
 
-        public void Dead()
+        public virtual void Dead()
         {
             if (playerType)
             { 
