@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace YuCheng
 {
 
     public class Player : Character
     {
+        [SerializeField, Header("文字")]
+        private TMP_Text attackMsg;
+
         public enum StatType { Strength, Constitution, Dexterity, Power, Intelligence, Luck }
 
         public override void Awake()
@@ -45,6 +49,8 @@ namespace YuCheng
             else
             {
                 Debug.Log("攻擊失敗！");
+                attackMsg.text = "MISS";
+                Invoke("clearAttackMsg", 1);
             }
         }
         private int GetStatValue(StatType stat) => new Dictionary<StatType, int>
@@ -56,5 +62,10 @@ namespace YuCheng
             { StatType.Intelligence, intelligence },
             { StatType.Luck, luck }
         }[stat];
+
+        private void clearAttackMsg()
+        {
+            attackMsg.text = "";
+        }
     }
 }

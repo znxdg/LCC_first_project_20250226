@@ -1,5 +1,4 @@
-﻿using UnityEditor.U2D.Aseprite;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace YuCheng
 {
@@ -12,7 +11,6 @@ namespace YuCheng
             base.Awake();
             hp = hpMax;
             Debug.Log(hpMax);
-        }
-        
+        } 
     }
 }

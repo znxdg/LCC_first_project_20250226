@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Generate an image of a dimly-lit (1)_0: -553934537807667899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
